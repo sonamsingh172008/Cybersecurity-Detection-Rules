@@ -1,14 +1,29 @@
-
 # Detection Rules
 
-This folder contains documentation and exported configurations for the custom Elastic Security detection rules developed in this project.
+This folder contains the exported Elastic Security detection rule configurations developed for this project.
 
 ## Rules
 
-1. Windows Credential Stuffing Detection
-2. Sysmon DNS Query Monitoring
-3. PowerShell Script Block Monitoring
+1. **Windows Credential Stuffing Detection**
+   - Monitors repeated failed Windows login attempts.
+   - Uses Event ID 4625 and groups events by source IP.
+
+2. **Sysmon DNS Query Monitoring**
+   - Monitors DNS queries collected through Sysmon.
+   - Uses Event ID 22.
+
+3. **PowerShell Script Block Monitoring**
+   - Monitors PowerShell Script Block Logging events.
+   - Uses Event ID 4104.
+
+## Exported Configuration Files
+
+- `windows-credential-stuffing.ndjson`
+- `sysmon-dns-monitoring.ndjson`
+- `powershell-script-block-monitoring.ndjson`
+
+All three files contain exported Elastic Security rule configurations.
 
 ## Note
 
-Add the actual exported detection rule configurations from Elastic Security here. Do not use example queries as if they were tested configurations.
+These rules support security monitoring and investigation. Their effectiveness depends on event collection, correct field mapping, and further testing.
